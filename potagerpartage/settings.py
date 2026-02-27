@@ -211,8 +211,8 @@ ORGANISATION_BANK_CONNECTION = {
     "ESR" : ""
 }
 ORGANISATION_WEBSITE = {
-    'name': "www.potagerpartage.org",
-    'url': "https://www.potagerpartage.org"
+    'name': "www.potager-partage.ch",
+    'url': "https://www.potager-partage.ch"
 }
 
 CONTACTS = {
