@@ -1,0 +1,9 @@
+.language-selector {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: white;
+    width: 100%;
+    text-align: center;
+    height: 2em;
+}
