@@ -197,11 +197,11 @@ ORGANISATION_NAME = "potager partagé"
 ORGANISATION_LONG_NAME = "potager partagé"
 ORGANISATION_ADDRESS = {
     "name":"potager partagé",
-    "street" : "Lyss-Strasse",
-    "number" : "64",
-    "zip" : "2560",
-    "city" : "Nidau",
-    "extra" : ""
+    "street" : "Richard-La-Nicca-Weg",
+    "number" : "11",
+    "zip" : "2503",
+    "city" : "Biel/Bienne",
+    "extra" : "c/o Schulthess/Lasowsky"
 }
 ORGANISATION_BANK_CONNECTION = {
     "PC" : "-",
