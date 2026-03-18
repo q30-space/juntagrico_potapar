@@ -16,7 +16,7 @@ SECRET_KEY = os.environ.get('JUNTAGRICO_SECRET_KEY')
 DEBUG = os.environ.get("JUNTAGRICO_DEBUG", 'False')=='True'
 
 if not DEBUG:
-    ALLOWED_HOSTS = ['potagerpartage.juntagrico.science']
+    ALLOWED_HOSTS = [' juntagrico.potager-partage.ch', 'potagerpartage.juntagrico.science']
 
 ADMINS = (
     ('Admin', os.environ.get('JUNTAGRICO_ADMIN_EMAIL')),
@@ -54,6 +54,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'juntagrico.apps.JuntagricoAdminConfig',
     'potagerpartage',
+    'juntagrico_billing',
+    'juntagrico_contribution',
     'juntagrico',
     'import_export',
     'impersonate',
