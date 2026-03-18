@@ -20,6 +20,8 @@ class JuntagricoTranslationConfig(AppConfig):
         admin.site.register(entity.subtypes.SubscriptionType, translation.TranslatedSubscriptionTypeAdmin)
         admin.site.unregister(entity.depot.Tour)
         admin.site.register(entity.depot.Tour, translation.TranslatedTourAdmin)
+        admin.site.unregister(entity.depot.Depot)
+        admin.site.register(entity.depot.Depot, translation.TranslatedDepotAdmin)
         admin.site.unregister(entity.jobs.JobType)
         admin.site.register(entity.jobs.JobType, translation.TranslatedJobTypeAdmin)
         admin.site.unregister(entity.jobs.RecuringJob)

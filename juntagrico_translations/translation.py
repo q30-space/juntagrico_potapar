@@ -1,5 +1,6 @@
 from juntagrico.admins.area_admin import AreaAdmin
 from juntagrico.admins.delivery_admin import DeliveryAdmin
+from juntagrico.admins.depot_admin import DepotAdmin
 from juntagrico.admins.inlines.delivery_inline import DeliveryInline
 from juntagrico.admins.job_admin import JobAdmin
 from juntagrico.admins.job_type_admin import JobTypeAdmin
@@ -114,6 +115,10 @@ class TranslatedSubscriptionTypeAdmin(SubscriptionTypeAdmin, TranslationAdmin):
 
 
 class TranslatedTourAdmin(TourAdmin, TranslationAdmin):
+    pass
+
+
+class TranslatedDepotAdmin(DepotAdmin, TranslationAdmin):
     pass
 
 
