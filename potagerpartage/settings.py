@@ -1,7 +1,7 @@
 """
 Django settings for potagerpartage project.
 """
-
+from gettext import gettext as _
 import os
 from pathlib import Path
 
@@ -192,6 +192,16 @@ DJRICHTEXTFIELD_CONFIG = defaults.richtextfield_config(LANGUAGE_CODE)
 
 
 # juntagrico Settings
+
+VOCABULARY = {
+    'subscription': _('Ernteanteil'),
+    'subscription_pl': _('Ernteanteile'),
+    'co_member': _('Co-Mitglied'),
+    'co_member_pl': _('Co-Mitglieder'),
+    'depot': _('Abholort'),
+    'depot_pl': _('Abholorte'),
+    'package': _('Erntekorb'),
+}
 
 ORGANISATION_NAME = "potager partagé"
 ORGANISATION_LONG_NAME = "potager partagé"
