@@ -1,0 +1,27 @@
+{% extends "juntagrico/signup/base.html" %}
+{% load i18n %}
+{% load juntagrico.config %}
+{% load crispy_forms_tags %}
+
+{% block intro_with_shares %}
+    <p>
+        {% blocktrans trimmed with v_share=vocabulary.share v_share_pl=vocabulary.share_pl v_subscription=vocabulary.subscription %}
+            Die Mitgliedschaft bei {{ v_d_enriched_organisation }} ist geknüpft an den Erwerb von
+            {{ v_share_pl }} in der Höhe von CHF {{ c_share_price }} pro {{ v_share }}.
+            Die Anzahl Anteilscheine ist abhängig vom gewählten Volumen der Ernteanteile.
+            Die {{ v_share_pl }} sind das Kapital, das vor allem zur Finanzierung von Investitionen –
+            zum Beispiel Infrastruktur - verwendet wird.
+            Beim Austritt werden die {{ v_share_pl }} rückerstattet.
+        {% endblocktrans %}
+    </p>
+{% endblock %}
+
+{% block intro_2 %}
+    {% blocktrans trimmed with v_member_type=vocabulary.member_type v_member_type_pl=vocabulary.member_type_pl %}
+        Die {{ v_member_type_pl }} tragen im Rahmen ihrer Motivationen, Prioritäten und
+        Möglichkeiten gemeinsam zum Gelingen des Betriebes bei.
+        Wer bei {{ v_d_enriched_organisation }} {{ v_member_type }} ist, verpflichtet sich zur
+        Mitarbeit in unterschiedlichen Tätigkeitsbereichen nach Wahl.
+        Zusätzliches wie auch spontanes Engagement ist jederzeit willkommen.
+    {% endblocktrans %}
+{% endblock %}

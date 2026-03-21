@@ -1,7 +1,7 @@
 """
 Django settings for potagerpartage project.
 """
-
+from gettext import gettext as _
 import os
 from pathlib import Path
 
@@ -18,7 +18,7 @@ SECRET_KEY = os.environ.get('JUNTAGRICO_SECRET_KEY')
 DEBUG = os.environ.get("JUNTAGRICO_DEBUG", 'False')=='True'
 
 if not DEBUG:
-    ALLOWED_HOSTS = ['potagerpartage.juntagrico.science']
+    ALLOWED_HOSTS = [' juntagrico.potager-partage.ch', 'potagerpartage.juntagrico.science']
 
 ADMINS = (
     ('Admin', os.environ.get('JUNTAGRICO_ADMIN_EMAIL')),
@@ -58,6 +58,8 @@ INSTALLED_APPS = [
     'juntagrico.apps.JuntagricoAdminConfig',
     'potagerpartage',
     'juntagrico_translations',
+    'juntagrico_billing',
+    'juntagrico_contribution',
     'juntagrico',
     'import_export',
     'impersonate',
@@ -202,15 +204,25 @@ DJRICHTEXTFIELD_CONFIG = defaults.richtextfield_config(LANGUAGE_CODE)
 
 # juntagrico Settings
 
+VOCABULARY = {
+    'subscription': _('Ernteanteil'),
+    'subscription_pl': _('Ernteanteile'),
+    'co_member': _('Co-Mitglied'),
+    'co_member_pl': _('Co-Mitglieder'),
+    'depot': _('Abholort'),
+    'depot_pl': _('Abholorte'),
+    'package': _('Erntekorb'),
+}
+
 ORGANISATION_NAME = "potager partagé"
 ORGANISATION_LONG_NAME = "potager partagé"
 ORGANISATION_ADDRESS = {
     "name":"potager partagé",
-    "street" : "Lyss-Strasse",
-    "number" : "64",
-    "zip" : "2560",
-    "city" : "Nidau",
-    "extra" : ""
+    "street" : "Richard-La-Nicca-Weg",
+    "number" : "11",
+    "zip" : "2503",
+    "city" : "Biel/Bienne",
+    "extra" : "c/o Schulthess/Lasowsky"
 }
 ORGANISATION_BANK_CONNECTION = {
     "PC" : "-",
