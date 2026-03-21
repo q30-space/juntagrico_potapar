@@ -5,6 +5,8 @@ from gettext import gettext as _
 import os
 from pathlib import Path
 
+from django.utils.translation import gettext_lazy as _
+
 from juntagrico import defaults
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -52,8 +54,10 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'modeltranslation',
     'juntagrico.apps.JuntagricoAdminConfig',
     'potagerpartage',
+    'juntagrico_translations',
     'juntagrico_billing',
     'juntagrico_contribution',
     'juntagrico',
@@ -95,8 +99,9 @@ WSGI_APPLICATION = 'potagerpartage.wsgi.application'
 # HTTP
 
 MIDDLEWARE = [
-    'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
+    'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -135,6 +140,10 @@ EMAIL_USE_SSL = os.environ.get('JUNTAGRICO_EMAIL_SSL', 'False')=='True'
 USE_I18N = True
 USE_L10N = True
 LANGUAGE_CODE = 'de'
+LANGUAGES = [
+    ('de', _('Deutsch')),
+    ('fr', _('Französisch')),
+]
 DATE_INPUT_FORMATS =['%d.%m.%Y']
 
 TIME_ZONE = 'Europe/Zurich'
@@ -234,4 +243,7 @@ CONTACTS = {
 ENABLE_SHARES = True
 SHARE_PRICE = "300"
 
-STYLES = {'static': ['potagerpartage/css/customize.css']}
+STYLES = {'static': [
+    'potagerpartage/css/customize.css',
+    'juntagrico_translations/css/style.css',
+]}
