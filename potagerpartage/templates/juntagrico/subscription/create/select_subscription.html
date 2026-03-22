@@ -1,0 +1,6 @@
+{% extends "juntagrico/subscription/create/select_subscription.html" %}
+{% load i18n %}
+
+{% block title %}
+    {% blocktrans with v_subscription_pl=vocabulary.subscription_pl %}Wähle deine {{ v_subscription_pl }}{% endblocktrans %}
+{% endblock %}

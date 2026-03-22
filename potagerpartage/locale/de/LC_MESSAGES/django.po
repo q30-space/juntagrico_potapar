@@ -106,3 +106,16 @@ msgstr ""
 msgid "Bis bald und liebe Grüsse die %(c_organisation_name)s-Betriebsgruppe"
 msgstr ""
 "Bis bald und liebe Grüsse die Betriebsgruppe von %(c_organisation_name)s"
+
+#: juntagrico/templates/juntagrico/subscription/create/select_shares.html:31
+#, python-format
+msgid ""
+"Für die von dir ausgewählten %(v_subscription)s-Bestandteile brauchst du "
+"insgesamt %(st)s %(v_share_pl)s. Du kannst natürlich noch mehr erwerben."
+msgstr ""
+"Für die von dir ausgewählte %(v_subscription)s-Volumen brauchst du "
+"insgesamt %(st)s %(v_share_pl)s. Du kannst natürlich noch mehr erwerben."
+
+#: juntagrico/forms/__init__.py:294
+msgid "Verbindlich bestellen"
+msgstr "Verpflichtend beitreten und bestellen"

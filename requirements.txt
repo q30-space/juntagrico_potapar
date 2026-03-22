@@ -1,4 +1,5 @@
-juntagrico~=2.0.0
+#juntagrico~=2.0.0
+git+https://github.com/juntagrico/juntagrico.git@french
 juntagrico-billing~=2.0.0
 juntagrico-contribution~=0.3.0
 gunicorn~=25.1.0

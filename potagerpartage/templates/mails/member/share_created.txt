@@ -1,0 +1,25 @@
+{% extends "mails/email.txt" %}
+{% load i18n %}
+{% load juntagrico.config %}
+{% block content %}
+{% config "organisation_address" as c_addr %}
+{% config "organisation_bank_connection" as c_bank %}
+{% config "share_price" as c_share_price %}
+{% config "currency" as c_currency %}
+{% config "organisation_name" as c_organisation_name %}
+{% enriched_organisation "D" as v_d_enriched_organisation %}
+{% vocabulary "share" as v_share %}
+{% vocabulary "share_pl" as v_share_pl %}
+{% trans "Hallo" %}
+
+{% blocktrans with sc=shares|length%}Du hast bei {{ v_d_enriched_organisation }} {{sc}} {{ v_share_pl }} bestellt{% endblocktrans %}:
+{% for share in shares %}{% blocktrans with sid=share.id %}{{ v_share }} mit Systemnummer {{ sid }}{% endblocktrans %}
+{% endfor %}
+
+{% blocktrans with sc=shares|length %}Bitte überweise den Betrag von {{ c_currency }} {{ total }} ({{sc}} x {{ c_share_price }}) auf das folgende Konto:{% endblocktrans %}
+{% trans "Sobald das Konto eröffnet ist, senden wir dir die Koordinaten." %}
+
+{% blocktrans trimmed %}
+Bis bald und liebe Grüsse die {{ c_organisation_name }}-Betriebsgruppe
+{% endblocktrans %}
+{% endblock %}

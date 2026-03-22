@@ -89,7 +89,6 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'juntagrico.context_processors.vocabulary',
             ],
-            'debug' : DEBUG,
         },
     },
 ]
@@ -236,9 +235,13 @@ ORGANISATION_WEBSITE = {
     'url': "https://www.potager-partage.ch"
 }
 
+BYLAWS = _('https://spaers-divers.ch/wp-content/uploads/2026/03/Spaers-divers-potager-partage-HRweb-260123-de.pdf')
+
 CONTACTS = {
     "general": "info@potager-partage.ch"
 }
+
+REQUIRE_SUBSCRIPTION = True
 
 ENABLE_SHARES = True
 SHARE_PRICE = "300"

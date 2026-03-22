@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-18 22:46+0100\n"
+"POT-Creation-Date: 2026-03-22 20:51+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,46 +18,68 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: potagerpartage/settings.py:199
+#: potagerpartage/settings.py:143
+msgid "Deutsch"
+msgstr ""
+
+#: potagerpartage/settings.py:144
+msgid "Französisch"
+msgstr ""
+
+#: potagerpartage/settings.py:207
 msgid "Ernteanteil"
 msgstr "part de récolte"
 
-#: potagerpartage/settings.py:200
+#: potagerpartage/settings.py:208
 msgid "Ernteanteile"
 msgstr "parts de récolte"
 
-#: potagerpartage/settings.py:201
+#: potagerpartage/settings.py:209
 msgid "Co-Mitglied"
 msgstr "co-membre"
 
-#: potagerpartage/settings.py:202
+#: potagerpartage/settings.py:210
 msgid "Co-Mitglieder"
 msgstr "co-membres"
 
-#: potagerpartage/settings.py:203
+#: potagerpartage/settings.py:211
 msgid "Abholort"
 msgstr "lieu de récupération"
 
-#: potagerpartage/settings.py:204
+#: potagerpartage/settings.py:212
 msgid "Abholorte"
 msgstr "lieux de récupération"
 
-#: potagerpartage/settings.py:205
+#: potagerpartage/settings.py:213
 msgid "Erntekorb"
 msgstr "panier de récolte"
 
-#: potagerpartage/templates/juntagrico/subscription/signup/member.html:8
+#: potagerpartage/settings.py:238
+msgid ""
+"https://spaers-divers.ch/wp-content/uploads/2026/03/Spaers-divers-potager-"
+"partage-HRweb-260123-de.pdf"
+msgstr ""
+"https://spaers-divers.ch/wp-content/uploads/2026/03/Spaers-divers-potager-"
+"partage-HRweb-260123-fr.pdf"
+
+#: potagerpartage/templates/juntagrico/signup/member.html:8
 #, python-format
 msgid ""
 "Die Mitgliedschaft bei %(v_d_enriched_organisation)s ist geknüpft an den "
-"Erwerb von %(v_share_pl)s in der Höhe von CHF %(c_share_price)s pro "
-"%(v_share)s. Die Anzahl Anteilscheine ist abhängig vom gewählten Volumen der "
-"Ernteanteile. Die %(v_share_pl)s sind das Kapital, das vor allem zur "
-"Finanzierung von Investitionen – zum Beispiel Infrastruktur - verwendet "
-"wird. Beim Austritt werden die %(v_share_pl)s rückerstattet."
+"Erwerb von %(v_share_pl)sn in der Höhe von CHF %(c_share_price)s pro "
+"%(v_share)s. Die Anzahl %(v_share_pl)s ist abhängig vom %(v_subscription)s-"
+"Volumen. Die %(v_share_pl)s sind das Kapital, das vor allem zur Finanzierung "
+"von Investitionen – zum Beispiel Infrastruktur - verwendet wird. Beim "
+"Austritt werden die %(v_share_pl)s rückerstattet."
 msgstr ""
+"L'adhésion à %(v_d_enriched_organisation)s est liée à l'acquisition de "
+"%(v_share_pl)s d'une valeur de CHF %(c_share_price)s par %(v_share)s. Le "
+"nombre des %(v_share_pl)s dépend du volume de la %(v_subscription)s. Les "
+"%(v_share_pl)s constituent le capital principalement utilisé pour financer "
+"des investissements, par exemple dans les infrastructures. En cas de départ, "
+"les %(v_share_pl)s sont remboursés. "
 
-#: potagerpartage/templates/juntagrico/subscription/signup/member.html:20
+#: potagerpartage/templates/juntagrico/signup/member.html:20
 #, python-format
 msgid ""
 "Die %(v_member_type_pl)s tragen im Rahmen ihrer Motivationen, Prioritäten "
@@ -66,10 +88,20 @@ msgid ""
 "Mitarbeit in unterschiedlichen Tätigkeitsbereichen nach Wahl. Zusätzliches "
 "wie auch spontanes Engagement ist jederzeit willkommen."
 msgstr ""
+"Les %(v_member_type_pl)s contribuent ensemble au succès de l'entreprise dans "
+"le cadre de leurs motivations, priorités et possibilités. Quiconque est "
+"%(v_member_type)s de %(v_d_enriched_organisation)s s'engage à coopérer "
+"prendre en charge des tâches. Tout engagement supplémentaire ou spontané est "
+"toujours le bienvenu. "
+
+#: potagerpartage/templates/juntagrico/subscription/create/select_subscription.html:5
+#, python-format
+msgid "Wähle deine %(v_subscription_pl)s"
+msgstr "Choisis tes %(v_subscription_pl)s"
 
 #: potagerpartage/templates/mails/member/share_created.txt:13
 msgid "Hallo"
-msgstr ""
+msgstr "Salut"
 
 #: potagerpartage/templates/mails/member/share_created.txt:15
 #, python-format
@@ -82,26 +114,31 @@ msgstr ""
 msgid "%(v_share)s mit Systemnummer %(sid)s"
 msgstr ""
 
-#: potagerpartage/templates/mails/member/share_created.txt:18
+#: potagerpartage/templates/mails/member/share_created.txt:19
 #, python-format
 msgid ""
-"Bitte überweise %(sc)s Mal den Betrag von %(c_currency)s %(c_share_price)s "
-"auf das folgende Konto"
+"Bitte überweise den Betrag von %(c_currency)s %(total)s (%(sc)s x "
+"%(c_share_price)s) auf das folgende Konto:"
 msgstr ""
+"Merci d'effectuer un virement unique d'un montant de %(c_currency)s %(total)s (%(sc)s x "
+"%(c_share_price)s) sur le compte suivant :"
 
-#: potagerpartage/templates/mails/member/share_created.txt:24
-msgid "Postkonto-Nummer"
-msgstr ""
+#: potagerpartage/templates/mails/member/share_created.txt:20
+msgid "Sobald das Konto eröffnet ist, senden wir dir die Koordinaten."
+msgstr "Dès que le compte sera ouvert, nous t'enverrons les coordonnées."
 
-#: potagerpartage/templates/mails/member/share_created.txt:25
-msgid "IBAN"
-msgstr ""
-
-#: potagerpartage/templates/mails/member/share_created.txt:26
-msgid "BIC"
-msgstr ""
-
-#: potagerpartage/templates/mails/member/share_created.txt:28
+#: potagerpartage/templates/mails/member/share_created.txt:22
 #, python-format
 msgid "Bis bald und liebe Grüsse die %(c_organisation_name)s-Betriebsgruppe"
 msgstr ""
+
+#, python-format
+msgid ""
+"Für die von dir ausgewählten %(v_subscription)s-Bestandteile brauchst du "
+"insgesamt %(st)s %(v_share_pl)s. Du kannst natürlich noch mehr erwerben."
+msgstr ""
+"Il te faut au total %(st)s %(v_share_pl)s pour le volume de %(v_subscription)s "
+"que tu as choisis. Tu peux bien sûr en acheter davantage."
+
+msgid "Verbindlich bestellen"
+msgstr "adhérer et commander obligatoirement"
