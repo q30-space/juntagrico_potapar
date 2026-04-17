@@ -56,11 +56,12 @@ msgstr "panier de récolte"
 
 #: potagerpartage/settings.py:238
 msgid ""
-"https://spaers-divers.ch/wp-content/uploads/2026/03/Spaers-divers-potager-"
-"partage-HRweb-260123-de.pdf"
+"https://potagerpartage.ch/wp-content/uploads/2026/04/Statuten_potager"
+"_partage_DE.pdf"
+
 msgstr ""
-"https://spaers-divers.ch/wp-content/uploads/2026/03/Spaers-divers-potager-"
-"partage-HRweb-260123-fr.pdf"
+"https://potagerpartage.ch/wp-content/uploads/2026/04/Statuts_potager"
+"_partage_FR.pdf"
 
 #: potagerpartage/templates/juntagrico/signup/member.html:8
 #, python-format
