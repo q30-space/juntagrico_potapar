@@ -213,10 +213,10 @@ VOCABULARY = {
     'package': _('Erntekorb'),
 }
 
-ORGANISATION_NAME = "potager partagé"
-ORGANISATION_LONG_NAME = "potager partagé"
+ORGANISATION_NAME = "potager partagé - Spärs divers"
+ORGANISATION_LONG_NAME = "Potager Partagé - Spärs divers"
 ORGANISATION_ADDRESS = {
-    "name":"potager partagé",
+    "name":"potager partagé - Spärs divers",
     "street" : "Richard-La-Nicca-Weg",
     "number" : "11",
     "zip" : "2503",
