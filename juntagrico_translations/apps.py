@@ -6,6 +6,7 @@ class JuntagricoTranslationConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
 
     def ready(self):
+        from . import patches  # noqa: F401
         from django.contrib import admin
         from juntagrico import entity
         from juntagrico_translations import translation
