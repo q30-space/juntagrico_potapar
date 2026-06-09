@@ -72,6 +72,16 @@ INSTALLED_APPS = [
     'djrichtextfield',
 ]
 
+# juntagrico_webdav is a third-party app, so we can't ship migrations inside its
+# package. Relocating its migration history into a repo-owned package lets us add
+# the django-modeltranslation columns for WebdavServer.menu_title (menu_title_de /
+# menu_title_fr) via a committed migration that the hosting Redeploy ("Runs migrate")
+# applies automatically. The 0001/0002 files here are verbatim copies of the
+# add-on's own initial migrations so the migration graph stays intact.
+MIGRATION_MODULES = {
+    'juntagrico_webdav': 'potagerpartage.webdav_migrations',
+}
+
 ROOT_URLCONF = 'potagerpartage.urls'
 
 TEMPLATES = [
