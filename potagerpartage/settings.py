@@ -60,6 +60,7 @@ INSTALLED_APPS = [
     'juntagrico_translations',
     'juntagrico_billing',
     'juntagrico_contribution',
+    'juntagrico_webdav',
     'juntagrico',
     'import_export',
     'impersonate',

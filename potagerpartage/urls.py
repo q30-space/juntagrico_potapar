@@ -11,6 +11,7 @@ urlpatterns = [
          {'default': next_wednesday}, name='cs-start'),
     path('', include('juntagrico.urls')),
     path('',include('juntagrico_billing.urls')),
+    path('', include('juntagrico_webdav.urls')),
     path('jcr/', include('juntagrico_contribution.urls')),
     path('i18n/', include('django.conf.urls.i18n')),
 ]
