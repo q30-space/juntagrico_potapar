@@ -1,3 +1,5 @@
+from juntagrico_webdav.models import WebdavServer
+from juntagrico_webdav.admin import WebdavServerAdmin
 from juntagrico.admins.area_admin import AreaAdmin
 from juntagrico.admins.delivery_admin import DeliveryAdmin
 from juntagrico.admins.depot_admin import DepotAdmin
@@ -86,6 +88,11 @@ class ActivityAreaTranslationOptions(TranslationOptions):
     fields = ('name', 'description',)
 
 
+@register(WebdavServer)
+class WebdavServerTranslationOptions(TranslationOptions):
+    fields = ('menu_title',)
+
+
 class TranslatedProductSizeInline(subscription_product_admin.ProductSizeInline, TranslationTabularInline):
     pass
 
@@ -146,4 +153,8 @@ class TranslatedLocationAdmin(LocationAdmin, TranslationAdmin):
 
 
 class TranslatedAreaAdmin(AreaAdmin, TranslationAdmin):
+    pass
+
+
+class TranslatedWebdavServerAdmin(WebdavServerAdmin, TranslationAdmin):
     pass

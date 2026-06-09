@@ -33,3 +33,6 @@ class JuntagricoTranslationConfig(AppConfig):
         admin.site.register(entity.location.Location, translation.TranslatedLocationAdmin)
         admin.site.unregister(entity.jobs.ActivityArea)
         admin.site.register(entity.jobs.ActivityArea, translation.TranslatedAreaAdmin)
+        from juntagrico_webdav.models import WebdavServer
+        admin.site.unregister(WebdavServer)
+        admin.site.register(WebdavServer, translation.TranslatedWebdavServerAdmin)
