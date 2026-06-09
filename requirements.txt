@@ -1,5 +1,9 @@
 #juntagrico~=2.0.0
-git+https://github.com/juntagrico/juntagrico.git@french
+# q30-space/juntagrico @ fr-translations = juntagrico's `french` branch (2b785e19, v2.0.7)
+# plus one commit adding the complete French catalog (compiled .mo committed and in sync).
+# Pinned to a commit SHA so the hosting Redeploy reinstalls on every bump (it only
+# reinstalls when requirements.txt text changes). Bump the SHA to ship new translations.
+git+https://github.com/q30-space/juntagrico.git@5cf44dbcfd750ec1870d56993ad62e0c4c6d60ca
 juntagrico-billing~=2.0.0
 juntagrico-contribution~=0.3.0
 juntagrico-webdav~=2.0.0
