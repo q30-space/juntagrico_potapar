@@ -236,9 +236,9 @@ ORGANISATION_ADDRESS = {
 }
 ORGANISATION_BANK_CONNECTION = {
     "PC" : "-",
-    "IBAN" : "-",
-    "BIC" : "-",
-    "NAME" : "-",
+    "IBAN" : "CH74 0839 2000 1627 63301",
+    "BIC" : "FRGGCHB1XXX",
+    "NAME" : "Freie Gemeinschaftsbank Genossenschaft",
     "ESR" : ""
 }
 ORGANISATION_WEBSITE = {

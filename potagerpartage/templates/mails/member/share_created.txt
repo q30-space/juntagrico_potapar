@@ -17,7 +17,13 @@
 {% endfor %}
 
 {% blocktrans with sc=shares|length %}Bitte überweise den Betrag von {{ c_currency }} {{ total }} ({{sc}} x {{ c_share_price }}) auf das folgende Konto:{% endblocktrans %}
-{% trans "Sobald das Konto eröffnet ist, senden wir dir die Koordinaten." %}
+    {{ c_addr.name }}
+    {% if c_addr.extra %}{{ c_addr.extra }}{% endif %}
+    {{ c_addr.street }} {{ c_addr.number }}
+    {{ c_addr.zip }} {{ c_addr.city }}
+    {{ c_bank.NAME }}
+    {% trans "IBAN" %}: {{ c_bank.IBAN }}
+    {% trans "BIC" %}: {{ c_bank.BIC }}
 
 {% blocktrans trimmed %}
 Bis bald und liebe Grüsse die {{ c_organisation_name }}-Betriebsgruppe
